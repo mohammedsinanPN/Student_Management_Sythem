@@ -1,0 +1,58 @@
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username": "sinan",
+    "email": "sinan@gmail.com",
+    "password": "Sinan12345"
+}
+
+###
+POST http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+    "username": "sinan",
+    "password": "Sinan12345"
+}
+
+###
+GET http://127.0.0.1:8000/student/
+Authorization: Token 1d6f182b5240bac2fa828d7aed73385502e723ba
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/student/
+Authorization: Token 1d6f182b5240bac2fa828d7aed73385502e723ba
+Content-Type: application/json
+
+{
+    "name": "Sinan",
+    "roll_number": 101,
+    "course": "Python",
+    "age": 22,
+    "place": "Kerala"
+}
+
+###
+GET http://127.0.0.1:8000/student/1/
+Authorization: Token 1d6f182b5240bac2fa828d7aed73385502e723ba
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/student/1/
+Authorization: Token 1d6f182b5240bac2fa828d7aed73385502e723ba
+Content-Type: application/json
+
+{
+    "name": "Mohammed Sinan",
+    "roll_number": 101,
+    "course": "Django",
+    "age": 23,
+    "place": "Kochi"
+}
+
+###
+DELETE http://127.0.0.1:8000/student/1/
+Authorization: Token 1d6f182b5240bac2fa828d7aed73385502e723ba
